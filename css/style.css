@@ -1,1 +1,65 @@
 /* TODO: Make it awesome */
+
+body {
+  margin: auto;
+  max-width: 80%;
+  height: 100%;
+  background-color: blanchedalmond;
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  background-color: cadetblue;
+  margin: 40px 20px;
+  border: 2px solid darkslategrey;
+}
+
+header h1 {
+  color: blanchedalmond;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+
+}
+
+ol {
+  margin: 30px;
+  line-height: 1.5;
+}
+
+fieldset {
+  line-height: 2;
+}
+
+div.copy {
+  margin: 20px;
+}
+
+.deck.col-2 {
+  margin: 40px;
+  position: absolute;
+  bottom: 50%;
+}
+
+#cart-container {
+  margin: 0px 0px 0px 50px;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
