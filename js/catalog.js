@@ -5,6 +5,7 @@
 // Set up an empty cart for use on this page.
 const cart = new Cart([]);
 
+// cart = {items: []}
 // On screen load, we call this method to put all of the product options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -42,6 +43,7 @@ function handleSubmit(event) {
 
 function addSelectedItemToCart() {
   
+
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
