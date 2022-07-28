@@ -39,23 +39,49 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
-
+// DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
+<<<<<<< HEAD
   
 
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+=======
+  // DONE: suss out the item picked from the select list
+  let itemName = document.getElementById('items').value;
+  let itemObject;
+  for(let i=0; i < Product.allProducts.length; i++){
+    if(itemName === Product.allProducts[i].name){
+      itemObject = Product.allProducts[i];
+      break;
+    }
+  }
+
+  // DONE: get the quantity
+  let itemQuantity = document.getElementById('quantity').value;
+
+  // DONE: using those, add one item to the Cart
+  cart.addItem(itemObject, itemQuantity);
+>>>>>>> f5b8910ba35076bf4052b9255d9829ec937a8d26
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() { }
+// DONE: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() {
+  document.getElementById('itemCount').textContent = `${cart.items.length}`;
+}
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // TODO: Get the item and quantity from the form
-  // TODO: Add a new element to the cartContents div with that information
+  // DONE: Get the item and quantity from the form
+  let itemName = document.getElementById('items').value;
+  let itemQuantity = document.getElementById('quantity').value;
+
+  // DONE: Add a new element to the cartContents div with that information
+  let cartContentsElement = document.getElementById('cartContents');
+  let newItem = document.createElement('div');
+  newItem.textContent = `${itemName}, ${itemQuantity}`;
+  cartContentsElement.appendChild(newItem);
 }
 
 // Set up the "submit" event listener on the form.
